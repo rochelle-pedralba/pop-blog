@@ -1,6 +1,8 @@
 package com.ciel.blog.user;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,8 +16,7 @@ public class UserApiController {
     }
 
     @PostMapping({"/signup"})
-    public SignupResponseDto signup(SignupDto dto) {
+    public SignupResponseDto signup(@RequestBody @Valid SignupDto dto) {
         return userService.createUser(dto);
     }
-
 }
