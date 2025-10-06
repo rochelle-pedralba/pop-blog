@@ -21,7 +21,7 @@ public class UserService {
         return signupMapper.toSignupResponseDto(createdUser);
     }
 
-    public String authenticateUser(LoginDto dto) {
+    public String generateUserToken(LoginDto dto) {
         User user = findUserByUsername(dto.username());
         if (!user.getPassword().equals(dto.password())) {
             throw new InvalidCredentialsException("Incorrect password");
