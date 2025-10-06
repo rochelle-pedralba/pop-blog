@@ -40,7 +40,7 @@ public class UserService {
                     authenticated = true;
                 }
             } catch (Exception e) {
-                authenticated = false;
+                return false;
             }
         }
 
