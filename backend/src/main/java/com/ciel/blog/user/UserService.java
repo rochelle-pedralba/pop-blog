@@ -30,6 +30,23 @@ public class UserService {
         return jwtService.generateToken(user.getUsername());
     }
 
+    public Boolean authenticateUser(String token) {
+        boolean authenticated = false;
+
+        if (token != null) {
+            try {
+                String username = jwtService.extractUsername(token);
+                if (findUserByUsername(username) != null && jwtService.validateToken(token, username)) {
+                    authenticated = true;
+                }
+            } catch (Exception e) {
+                authenticated = false;
+            }
+        }
+
+        return authenticated;
+    }
+
     public User findUserByUsername(String username) {
         return userRepository.findByUsername(username)
                 .orElseThrow(() -> new InvalidCredentialsException("Username not found: " + username));
