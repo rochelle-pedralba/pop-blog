@@ -47,6 +47,14 @@ public class UserService {
         return authenticated;
     }
 
+    public User getCurrentUser(String token) {
+        if(authenticateUser(token)) {
+            return findUserByUsername(jwtService.extractUsername(token));
+        } else  {
+            throw new InvalidCredentialsException("Null or incorrect token");
+        }
+    }
+
     public User findUserByUsername(String username) {
         return userRepository.findByUsername(username)
                 .orElseThrow(() -> new InvalidCredentialsException("Username not found: " + username));

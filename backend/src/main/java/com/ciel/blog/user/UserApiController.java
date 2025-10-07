@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api")
 public class UserApiController {
     private final UserService  userService;
 
@@ -18,12 +18,12 @@ public class UserApiController {
         this.userService = userService;
     }
 
-    @PostMapping({"/signup"})
+    @PostMapping({"/auth/signup"})
     public SignupResponseDto signup(@RequestBody @Valid SignupDto dto) {
         return userService.createUser(dto);
     }
 
-    @PostMapping({"/login"})
+    @PostMapping({"/auth/login"})
     public ResponseEntity<LoginResponseDto> login(@RequestBody @Valid LoginDto dto, HttpServletResponse response) {
         String token = userService.generateUserToken(dto);
 
@@ -36,10 +36,22 @@ public class UserApiController {
         return ResponseEntity.ok(new LoginResponseDto(dto.username(), "Login Successful"));
     }
 
-    @GetMapping({"/check"})
+    @GetMapping({"/auth/check"})
     public ResponseEntity<Map<String, Boolean>> checkAuth(@CookieValue(name = "token", required = false) String token) {
         Map<String, Boolean> response = new HashMap<>();
         response.put("Authenticated", userService.authenticateUser(token));
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping({"/auth/me"})
+    public ResponseEntity<?> getUserInfo(@CookieValue(name = "token", required = false) String token) {
+        User user =  userService.getCurrentUser(token);
+        return ResponseEntity.ok(
+                Map.of(
+                        "id", user.getId(),
+                        "email", user.getEmail(),
+                        "username", user.getUsername()
+                )
+        );
     }
 }

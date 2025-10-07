@@ -38,6 +38,9 @@ public class User {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(nullable = false, updatable = false, columnDefinition = "boolean default false")
+    private final Boolean admin = false;
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private UserProfile userProfile;
 
