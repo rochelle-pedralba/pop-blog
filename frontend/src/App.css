@@ -47,3 +47,35 @@ header {
     }
   }
 }
+
+.feature-post {
+  display: flex;
+
+  .overview {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    h1 {
+      margin-right: 3rem;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: row;
+
+      .author, .date-posted {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 1rem;
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  img {
+    border-radius: 1rem;
+  }
+}
