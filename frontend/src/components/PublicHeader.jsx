@@ -1,4 +1,4 @@
-import app_logo from "../assets/sharenlearn.png"
+import app_logo from "../assets/popblog.png"
 import user from "../assets/user.svg"
 
 export default function PublicHeader() {
@@ -6,7 +6,7 @@ export default function PublicHeader() {
         <header className="header">
             <div className="logo-container">
                 <img src={app_logo} alt="application logo" />
-                <p>SNL</p>
+                <p>Pop! Blog</p>
             </div>
 
             <div className="page-container">
