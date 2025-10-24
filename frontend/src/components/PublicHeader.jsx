@@ -1,11 +1,12 @@
-import logo from "../assets/react.svg"
+import app_logo from "../assets/sharenlearn.png"
+import user from "../assets/user.svg"
 
 export default function PublicHeader() {
     return (
         <header className="header">
             <div className="logo-container">
-                <img src={logo} alt="react logo" />
-                <p>Share and Learn</p>
+                <img src={app_logo} alt="application logo" />
+                <p>SNL</p>
             </div>
 
             <div className="page-container">
@@ -15,7 +16,7 @@ export default function PublicHeader() {
             </div>
 
             <div className="login-container">
-                <img src={logo} alt="react logo" />
+                <img src={user} alt="user icon" />
                 <a>Login</a>
             </div>
         </header>

@@ -5,8 +5,13 @@
   text-align: center;
 }
 
+body {
+  background: #ffffff;
+  color: #333333;
+}
+
 header {
-  background-color: #ffffff;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,13 +21,20 @@ header {
   top: 0;
   left: 0;
 
+  img {
+    width: 20px;
+    height: 100%;
+  }
+
   a, p {
-    color: #213547;
+    color: #00a0d2;
     font-weight: bold;
   }
 
   .logo-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 1rem;
     p {
       margin-left: 10px;
@@ -50,13 +62,26 @@ header {
 
 .feature-post {
   display: flex;
+  width: 100%;
+  background: #a4b1d2;
 
   .overview {
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin-left: 50px;
+
+    h4 {
+      color: #ffffff;
+      background-color: #00a0d2;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      text-align: start;
+    }
+
     h1 {
       margin-right: 3rem;
+      text-align: start;
     }
 
     .details {
@@ -70,6 +95,7 @@ header {
         margin-right: 1rem;
         img {
           width: 20px;
+          margin-right: 0.5rem;
         }
       }
     }
@@ -77,5 +103,6 @@ header {
 
   img {
     border-radius: 1rem;
+    margin-right: 50px;
   }
 }
