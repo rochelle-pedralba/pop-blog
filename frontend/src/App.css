@@ -125,12 +125,14 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: #ffffff;
 
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 3rem;
+    color: #000000;
 
     .details {
       text-align: start;
