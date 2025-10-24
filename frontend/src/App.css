@@ -1,13 +1,9 @@
-#root {
-  max-width: 100vw;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-}
-
 body {
+  margin: 0;
+  padding: 0;
   background: #ffffff;
   color: #333333;
+  width: 100%;
 }
 
 header {
@@ -15,8 +11,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  width: 100vw;
+  position: sticky;
+  width: 100%;
   height: 80px;
   top: 0;
   left: 0;
@@ -64,6 +60,8 @@ header {
   display: flex;
   width: 100%;
   background: #a4b1d2;
+  padding-top: 6rem;
+  padding-bottom: 7rem;
 
   .overview {
     display: flex;
@@ -120,5 +118,29 @@ header {
   img {
     border-radius: 1rem;
     margin-right: 50px;
+  }
+}
+
+.recent-articles {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .details {
+      text-align: start;
+      h3 {
+        font-weight: normal;
+      }
+    }
+    button {
+      background: #00a0d2;
+      border-radius: 3rem;
+    }
   }
 }
