@@ -24,7 +24,7 @@ header {
   }
 
   a, p {
-    color: #00a0d2;
+    color: #ffffff;
     font-weight: bold;
   }
 
@@ -43,6 +43,10 @@ header {
     margin-left: -5.5rem;
     a {
       margin-left: 0.5rem;
+      color: #00a0d2;
+      &:hover {
+        color: #005f7c;
+      }
     }
   }
 
@@ -216,22 +220,64 @@ header {
 
 footer {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 5rem;
+  background: black;
+  color: white;
 
   .footer {
     display: flex;
     flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 20rem;
 
     .overview, .quick-links, .categories {
       display: flex;
       flex-direction: column;
+      h4, h3 {
+        margin: 0;
+      }
+      a {
+        color: #00a0d2;
+        &:hover {
+          color: #005f7c;
+        }
+      }
     }
 
     .overview {
       span {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        margin-bottom: 0.5rem;
+        img {
+          width: 2rem;
+          height: 2rem;
+          margin-right: 1rem;
+        }
+      }
+      h4 {
+        font-weight: normal;
       }
     }
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #555;
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  p {
+    align-self: start;
+    padding-left: 5rem;
   }
 }

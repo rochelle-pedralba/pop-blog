@@ -9,7 +9,7 @@ export default function Footer() {
                       <img src={logo} alt="pop blog logo" />
                       <h3>Pop! Blog</h3>
                   </span>
-                    <p>Your destination for latest music updates</p>
+                    <h4>Your destination for latest music updates</h4>
                 </div>
                 <div className="quick-links">
                     <h4>Quick Links</h4>
@@ -25,6 +25,7 @@ export default function Footer() {
                     <a>World Music</a>
                 </div>
             </div>
+            <hr/>
             <p>© 2025 Pop! Blog. All rights reserved.</p>
         </footer>
     )
