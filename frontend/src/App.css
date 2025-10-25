@@ -14,6 +14,7 @@ header {
   position: sticky;
   width: 100%;
   height: 80px;
+  z-index: 50;
   top: 0;
   left: 0;
 
@@ -143,6 +144,69 @@ header {
     button {
       background: #00a0d2;
       border-radius: 3rem;
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 50px 0;
+    margin: 0 auto;
+    max-width: 100%;
+    justify-items: center;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 550px;
+      width: 25rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+      .image-container {
+        display: flex;
+        p {
+          position: absolute;
+          margin-left: 1.5rem;
+          background-color: white;
+          padding: 0.3rem 0.6rem;
+          border-radius: 0.2rem;
+        }
+
+        img {
+          width: 30rem;
+        }
+      }
+
+      .description {
+        padding: 0 1rem;
+        h4 {
+          font-weight: normal;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      .details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        .author, .reading-time, .published-date {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          img {
+            width: 20px;
+            height: 100%;
+            margin-right: 0.5rem;
+          }
+        }
+      }
     }
   }
 }

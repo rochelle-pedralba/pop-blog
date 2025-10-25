@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "category": "Technology",
+        "title": "The Rise of AI-Powered Creativity",
+        "shortDescription": "Discover how artificial intelligence is reshaping the creative industry — from music composition to digital art generation — and what it means for human artists in the modern era.",
+        "author": "Alex Ramirez",
+        "readingTime": "5 min read",
+        "datePublished": "2025-10-20",
+        "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80"
+    },
+    {
+        "id": 2,
+        "category": "Lifestyle",
+        "title": "How Minimalism Can Simplify Your Daily Life",
+        "shortDescription": "Learn how to declutter your space and your mind through minimalism. A few small lifestyle changes can lead to more peace, focus, and fulfillment.",
+        "author": "Jamie Cruz",
+        "readingTime": "4 min read",
+        "datePublished": "2025-10-15",
+        "imageUrl": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&q=80"
+    },
+    {
+        "id": 3,
+        "category": "Music",
+        "title": "Inside the World of Independent Artists",
+        "shortDescription": "Independent musicians are redefining success by owning their art. Here’s how they’re breaking through without major labels and connecting directly with fans.",
+        "author": "Riley Mendoza",
+        "readingTime": "6 min read",
+        "datePublished": "2025-10-18",
+        "imageUrl": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&q=80"
+    },
+    {
+        "id": 4,
+        "category": "Travel",
+        "title": "Unseen Philippines: Hidden Destinations Worth Visiting",
+        "shortDescription": "Step beyond the usual tourist spots and explore the Philippines’ lesser-known gems — from quiet islands to scenic mountain villages.",
+        "author": "Katrina Delos Santos",
+        "readingTime": "7 min read",
+        "datePublished": "2025-10-10",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+    },
+    {
+        "id": 5,
+        "category": "Productivity",
+        "title": "The Science Behind Staying Focused",
+        "shortDescription": "Ever wonder why your attention drifts so easily? Learn about the psychology of focus and practical ways to strengthen your mental clarity.",
+        "author": "Chris Navarro",
+        "readingTime": "5 min read",
+        "datePublished": "2025-10-22",
+        "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80"
+    }
+]
