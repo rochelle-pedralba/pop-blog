@@ -64,7 +64,7 @@ header {
 .feature-post {
   display: flex;
   width: 100%;
-  background: #a4b1d2;
+  background: linear-gradient(to right, #01bff8, #fe937b);
   padding-top: 6rem;
   padding-bottom: 7rem;
 
@@ -76,7 +76,8 @@ header {
 
     h4 {
       color: #ffffff;
-      background-color: #00a0d2;
+      background: linear-gradient(to right, #01bff8, #fe937b);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       padding: 0.5rem;
       border-radius: 0.5rem;
       text-align: start;
