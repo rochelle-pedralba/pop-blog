@@ -213,3 +213,25 @@ header {
     }
   }
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+
+    .overview, .quick-links, .categories {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .overview {
+      span {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}

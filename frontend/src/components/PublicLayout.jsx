@@ -1,6 +1,7 @@
 import PublicHeader from "./PublicHeader.jsx";
 import FeaturedPost from "./FeaturedPost.jsx"
 import RecentPost from "./RecentPost.jsx"
+import Footer from "./Footer.jsx"
 
 export  default function PublicLayout() {
     return (
@@ -8,6 +9,7 @@ export  default function PublicLayout() {
             <PublicHeader/>
             <FeaturedPost/>
             <RecentPost/>
+            <Footer/>
         </>
     )
 }
