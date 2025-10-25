@@ -1,52 +1,52 @@
 [
     {
         "id": 1,
-        "category": "Technology",
-        "title": "The Rise of AI-Powered Creativity",
-        "shortDescription": "Discover how artificial intelligence is reshaping the creative industry — from music composition to digital art generation — and what it means for human artists in the modern era.",
+        "category": "Music Production",
+        "title": "How AI Is Changing the Way We Make Music",
+        "shortDescription": "From beat generation to vocal mixing, artificial intelligence is revolutionizing music production. Here’s how producers are using AI tools to enhance creativity instead of replacing it.",
         "author": "Alex Ramirez",
         "readingTime": "5 min read",
         "datePublished": "2025-10-20",
-        "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80"
+        "imageUrl": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&q=80"
     },
     {
         "id": 2,
-        "category": "Lifestyle",
-        "title": "How Minimalism Can Simplify Your Daily Life",
-        "shortDescription": "Learn how to declutter your space and your mind through minimalism. A few small lifestyle changes can lead to more peace, focus, and fulfillment.",
+        "category": "Music Lifestyle",
+        "title": "Balancing Passion and Rest as a Musician",
+        "shortDescription": "Constant practice can lead to burnout. Learn how to find balance between improving your craft and giving yourself time to recharge creatively.",
         "author": "Jamie Cruz",
         "readingTime": "4 min read",
         "datePublished": "2025-10-15",
-        "imageUrl": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?w=800&q=80"
+        "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80"
     },
     {
         "id": 3,
-        "category": "Music",
+        "category": "Indie Scene",
         "title": "Inside the World of Independent Artists",
         "shortDescription": "Independent musicians are redefining success by owning their art. Here’s how they’re breaking through without major labels and connecting directly with fans.",
         "author": "Riley Mendoza",
         "readingTime": "6 min read",
         "datePublished": "2025-10-18",
-        "imageUrl": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?w=800&q=80"
+        "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80"
     },
     {
         "id": 4,
-        "category": "Travel",
-        "title": "Unseen Philippines: Hidden Destinations Worth Visiting",
-        "shortDescription": "Step beyond the usual tourist spots and explore the Philippines’ lesser-known gems — from quiet islands to scenic mountain villages.",
+        "category": "World Music",
+        "title": "Exploring the Sounds of the Philippines",
+        "shortDescription": "The Philippines is rich with diverse musical traditions — from folk rhythms to modern OPM. Explore how culture and history shape its evolving soundscape.",
         "author": "Katrina Delos Santos",
         "readingTime": "7 min read",
         "datePublished": "2025-10-10",
-        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+        "imageUrl": "https://images.unsplash.com/photo-1507878866276-a947ef722fee?w=800&q=80"
     },
     {
         "id": 5,
-        "category": "Productivity",
-        "title": "The Science Behind Staying Focused",
-        "shortDescription": "Ever wonder why your attention drifts so easily? Learn about the psychology of focus and practical ways to strengthen your mental clarity.",
+        "category": "Songwriting",
+        "title": "Finding Inspiration When the Lyrics Won’t Come",
+        "shortDescription": "Every songwriter hits creative blocks. Discover practical ways to reignite your imagination and turn everyday emotions into meaningful lyrics.",
         "author": "Chris Navarro",
         "readingTime": "5 min read",
         "datePublished": "2025-10-22",
-        "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80"
+        "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80"
     }
 ]

@@ -181,6 +181,9 @@ header {
 
       .description {
         padding: 0 1rem;
+        h3 {
+          height: 3rem;
+        }
         h4 {
           font-weight: normal;
           margin-top: 0;

@@ -4,6 +4,12 @@ import time from '../assets/time.png'
 
 export default function RecentPost() {
 
+    function truncateText(text, maxLength = 120) {
+        return text.length > maxLength
+            ? text.slice(0, maxLength) + "..."
+            : text;
+    }
+
     const cardElements = cardData.map((card, index) =>
         <div key={index} className="card">
             <div className='image-container'>
@@ -13,7 +19,7 @@ export default function RecentPost() {
 
             <div className='description'>
                 <h3>{card.title}</h3>
-                <h4>{card.shortDescription}</h4>
+                <h4>{truncateText(card.shortDescription)}</h4>
             </div>
 
             <div className='details'>
