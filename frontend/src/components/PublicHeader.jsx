@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import app_logo from "../assets/popblog.png"
 import user from "../assets/user.svg"
 
@@ -10,14 +11,14 @@ export default function PublicHeader() {
             </div>
 
             <div className="page-container">
-                <a>Home</a>
-                <a>Articles</a>
-                <a>About</a>
+                <Link to={"/"}>Home</Link>
+                <Link to={"/article"}>Articles</Link>
+                <Link to={"/about"}>About</Link>
             </div>
 
             <div className="login-container">
                 <img src={user} alt="user icon" />
-                <a>Login</a>
+                <Link  to={"/login"}>Login</Link>
             </div>
         </header>
     )

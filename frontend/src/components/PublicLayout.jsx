@@ -1,15 +1,17 @@
+import { Outlet } from "react-router-dom";
 import PublicHeader from "./PublicHeader.jsx";
-import FeaturedPost from "./FeaturedPost.jsx"
-import RecentPost from "./RecentPost.jsx"
 import Footer from "./Footer.jsx"
 
 export  default function PublicLayout() {
     return (
-        <>
+        <div className="public-layout">
             <PublicHeader/>
-            <FeaturedPost/>
-            <RecentPost/>
+
+            <main>
+                <Outlet />
+            </main>
+
             <Footer/>
-        </>
+        </div>
     )
 }

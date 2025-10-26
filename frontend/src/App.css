@@ -1,9 +1,12 @@
+#root {
+  width: 100vw;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: #ffffff;
   color: #333333;
-  width: 100%;
 }
 
 header {
@@ -62,169 +65,186 @@ header {
   }
 }
 
-.feature-post {
-  display: flex;
-  width: 100%;
-  background: linear-gradient(to right, #01bff8, #fe937b);
-  padding-top: 6rem;
-  padding-bottom: 7rem;
-
-  .overview {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-left: 50px;
-
-    h4 {
-      color: #ffffff;
-      background: linear-gradient(to right, #01bff8, #fe937b);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      text-align: start;
-    }
-
-    h1 {
-      margin-right: 3rem;
-      text-align: start;
-    }
-
-    h2 {
-      font-weight: normal;
-    }
-
-    .details {
-      display: flex;
-      flex-direction: row;
-
-      .author, .date-posted {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-right: 1rem;
-        img {
-          width: 20px;
-          margin-right: 0.5rem;
-        }
-      }
-    }
-
-    img {
-      box-shadow: none;
-    }
-  }
-
-  .feature-post-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    button {
-      background: #00a0d2;
-      border-radius: 3rem;
-      margin-right: 0.5rem;
-    }
-  }
-
-  img {
-    border-radius: 1rem;
-    margin-right: 50px;
-    box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.5);
-  }
-}
-
-.recent-articles {
+.public-layout {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  background-color: #ffffff;
 
-  .header {
+  main {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 3rem;
-    color: #000000;
-
-    .details {
-      text-align: start;
-      h3 {
-        font-weight: normal;
-      }
-    }
-    button {
-      background: #00a0d2;
-      border-radius: 3rem;
-    }
   }
 
-  .content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    gap: 50px 0;
-    margin: 0 auto;
-    max-width: 100%;
-    justify-items: center;
+  .article-page, .about-page, .login-page, .signup-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+  }
 
-    .card {
+  .feature-post {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(to right, #01bff8, #fe937b);
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+
+    .overview {
       display: flex;
       flex-direction: column;
-      height: 550px;
-      width: 25rem;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      align-items: start;
+      margin-left: 50px;
 
-      .image-container {
-        display: flex;
-        p {
-          position: absolute;
-          margin-left: 1.5rem;
-          background-color: white;
-          padding: 0.3rem 0.6rem;
-          border-radius: 0.2rem;
-        }
-
-        img {
-          width: 30rem;
-        }
+      h4 {
+        color: #ffffff;
+        background: linear-gradient(to right, #01bff8, #fe937b);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        text-align: start;
       }
 
-      .description {
-        padding: 0 1rem;
-        h3 {
-          height: 3rem;
-        }
-        h4 {
-          font-weight: normal;
-          margin-top: 0;
-          margin-bottom: 0;
-        }
+      h1 {
+        margin-right: 3rem;
+        text-align: start;
+      }
+
+      h2 {
+        font-weight: normal;
       }
 
       .details {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 1rem;
 
-        .author, .reading-time, .published-date {
+        .author, .date-posted {
           display: flex;
           flex-direction: row;
           align-items: center;
-
+          margin-right: 1rem;
           img {
             width: 20px;
-            height: 100%;
             margin-right: 0.5rem;
+          }
+        }
+      }
+
+      img {
+        box-shadow: none;
+      }
+    }
+
+    .feature-post-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        background: #00a0d2;
+        border-radius: 3rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    img {
+      border-radius: 1rem;
+      margin-right: 50px;
+      box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.5);
+    }
+  }
+
+  .recent-articles {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem;
+      color: #000000;
+
+      .details {
+        text-align: start;
+        h3 {
+          font-weight: normal;
+        }
+      }
+      button {
+        background: #00a0d2;
+        border-radius: 3rem;
+      }
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 50px 0;
+      margin: 0 auto;
+      max-width: 100%;
+      justify-items: center;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        height: 550px;
+        width: 25rem;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        .image-container {
+          display: flex;
+          p {
+            position: absolute;
+            margin-left: 1.5rem;
+            background-color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.2rem;
+          }
+
+          img {
+            width: 30rem;
+          }
+        }
+
+        .description {
+          padding: 0 1rem;
+          h3 {
+            height: 3rem;
+          }
+          h4 {
+            font-weight: normal;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+
+        .details {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 1rem;
+
+          .author, .reading-time, .published-date {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img {
+              width: 20px;
+              height: 100%;
+              margin-right: 0.5rem;
+            }
           }
         }
       }
     }
   }
 }
-
 footer {
   display: flex;
   align-items: center;

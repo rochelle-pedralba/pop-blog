@@ -1,4 +1,5 @@
 import logo from '../assets/popblog.png'
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -13,16 +14,18 @@ export default function Footer() {
                 </div>
                 <div className="quick-links">
                     <h4>Quick Links</h4>
-                    <a>Home</a>
-                    <a>Articles</a>
-                    <a>About</a>
+                    <Link to={"/"}>Home</Link>
+                    <Link to={"/article"}>Articles</Link>
+                    <Link to={"/about"}>About</Link>
+                    <Link to={"/login"}>Login</Link>
+                    <Link to={"/signup"}>Sign Up</Link>
                 </div>
                 <div className="categories">
                     <h4>Categories</h4>
-                    <a>Songwriting</a>
-                    <a>Music Production</a>
-                    <a>Music Lifestyle</a>
-                    <a>World Music</a>
+                    <Link to={"/songwriting"}>Songwriting</Link>
+                    <Link to={"/music-production"}>Music Production</Link>
+                    <Link to={"/music-lifestyle"}>Music Lifestyle</Link>
+                    <Link to={"/world-music"}>World Music</Link>
                 </div>
             </div>
             <hr/>
