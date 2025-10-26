@@ -11,13 +11,15 @@ export default  function Login() {
     return (
         <div className="login-page">
             <form method="POST" onSubmit={handleSubmit}>
+                <h2>Login</h2>
+
                 <label htmlFor="email"> Email</label>
                 <input type="email" id="email" name="email" required/>
 
                 <label htmlFor="password"> Password</label>
                 <input type="password" id="password" name="password" required/>
 
-                <input type="submit" value="Login" />
+                <input className="submit" type="submit" value="Login" />
             </form>
             <p>No Account yet? <Link to="/signup">Sign Up</Link></p>
         </div>

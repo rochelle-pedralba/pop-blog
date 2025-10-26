@@ -75,10 +75,66 @@ header {
     align-items: center;
   }
 
-  .article-page, .about-page, .login-page, .signup-page {
+  .article-page, .about-page {
     display: flex;
     flex-direction: column;
     height: 100vh;
+  }
+
+  .login-page, .signup-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-page, .signup-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    form {
+      margin-top: 5rem;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      box-shadow: 4px 4px  10px rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+
+      h2 {
+        margin: 0;
+      }
+
+      label {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        font-size: medium;
+        align-self: start;
+        margin-left: 1.2rem;
+        font-weight: bold;
+      }
+
+      input {
+        width: 90%;
+        height: 2rem;
+        border-radius: 10px;
+        border: none;
+        padding: 0 10px;
+        font-size: medium;
+      }
+
+      .submit {
+        width: 20%;
+        border-radius: 50px;
+        margin-top: 20px;
+        &:hover {
+          background: #00a0d2;
+          transition-duration: 0.2s;
+        }
+      }
+    }
   }
 
   .feature-post {
@@ -244,6 +300,7 @@ header {
     }
   }
 }
+
 footer {
   display: flex;
   align-items: center;
