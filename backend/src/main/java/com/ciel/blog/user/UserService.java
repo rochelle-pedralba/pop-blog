@@ -1,6 +1,7 @@
 package com.ciel.blog.user;
 
 import com.ciel.blog.exception.InvalidCredentialsException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +28,8 @@ public class UserService {
 
     public String generateUserToken(LoginDto dto) {
         User user = findUserByUsername(dto.username());
-        if (!user.getPassword().equals(dto.password())) {
+        boolean matches = passwordEncoder.matches(dto.password(), user.getPassword());
+        if (!matches) {
             throw new InvalidCredentialsException("Incorrect password");
         }
 
