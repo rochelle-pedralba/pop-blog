@@ -1,7 +1,19 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
+import {useEffect, useState} from "react";
 
 export default  function Login() {
+
+    let [ message, setMessage ] = useState({});
+    let [ isSubmitted, setIsSubmitted ] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsSubmitted(false);
+        }, 2500)
+
+        return () => clearTimeout(timer);
+    }, [isSubmitted]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -11,15 +23,23 @@ export default  function Login() {
 
         try {
             const res = await axios.post('http://localhost:8080/api/auth/login', data);
-            console.log('Success:', res.data);
+            setMessage({text: "Login successful", background: "#8EFF4DFF", color: "#1c2d10"});
+            setIsSubmitted(true);
         } catch (err) {
-            console.error('Error:', err.response?.data || err.message);
+            setMessage({text: err.response?.data || err.message, background: "rgba(255,69,36,0.55)", color: "#5e0d00"});
+            setIsSubmitted(true);
         }
     };
 
-
     return (
         <div className="login-page">
+
+            {isSubmitted ?
+                <div className="login-message" style={{backgroundColor: message.background}}>
+                    <p style={{textColor: message.color}}>{message.text}</p>
+                </div>
+            : null}
+
             <form method="POST" onSubmit={handleSubmit}>
                 <h2>Login</h2>
 

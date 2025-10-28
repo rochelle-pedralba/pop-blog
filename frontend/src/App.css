@@ -92,6 +92,16 @@ header {
     justify-content: start;
     align-items: center;
 
+    .signup-message, .login-message {
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      position: absolute;
+      p {
+        padding: 0.5rem 0.5rem;
+        margin: 0;
+      }
+    }
+
     form {
       margin-top: 5rem;
       padding: 20px 10px;
