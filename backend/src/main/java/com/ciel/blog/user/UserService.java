@@ -36,7 +36,7 @@ public class UserService {
             else if (message.contains("username")) {
                 throw new DuplicateUserException("Username already exists");
             } else {
-                throw new DuplicateUserException("User already exists");
+                throw new InvalidCredentialsException("Unable to create user");
             }
         }
     }
@@ -78,6 +78,6 @@ public class UserService {
 
     public User findUserByUsername(String username) {
         return userRepository.findByUsername(username)
-                .orElseThrow(() -> new InvalidCredentialsException("Username not found: " + username));
+                .orElseThrow(() -> new InvalidCredentialsException("Username " + username + " does not exist"));
     }
 }
