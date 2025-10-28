@@ -33,7 +33,7 @@ public class UserApiController {
         cookie.setPath("/");
         response.addCookie(cookie);
 
-        return ResponseEntity.ok(new LoginResponseDto(dto.username(), "Login Successful"));
+        return ResponseEntity.ok(new LoginResponseDto(dto.username()));
     }
 
     @GetMapping({"/auth/check"})
