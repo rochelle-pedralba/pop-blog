@@ -1,7 +1,8 @@
 package com.ciel.blog.user;
 
+import com.ciel.blog.exception.DuplicateUserException;
 import com.ciel.blog.exception.InvalidCredentialsException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -22,8 +23,22 @@ public class UserService {
     public SignupResponseDto createUser(SignupDto dto) {
         User user = signupMapper.toUser(dto);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        User createdUser = userRepository.save(user);
-        return signupMapper.toSignupResponseDto(createdUser);
+
+        try {
+            User createdUser = userRepository.save(user);
+            return signupMapper.toSignupResponseDto(createdUser);
+        }
+        catch (DataIntegrityViolationException e) {
+            String message = e.getMostSpecificCause().getMessage();
+            if (message.contains("email")) {
+                throw new DuplicateUserException("Email already exists");
+            }
+            else if (message.contains("username")) {
+                throw new DuplicateUserException("Username already exists");
+            } else {
+                throw new DuplicateUserException("User already exists");
+            }
+        }
     }
 
     public String generateUserToken(LoginDto dto) {
